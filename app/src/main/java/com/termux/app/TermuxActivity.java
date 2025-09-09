@@ -67,6 +67,32 @@ import androidx.viewpager.widget.ViewPager;
 
 import java.util.Arrays;
 
+
+import com.eightbitlab.blurview.BlurView;
+import com.eightbitlab.blurview.RenderScriptBlur;
+
+...
+
+public class TermuxActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_termux);
+
+        BlurView blurView = findViewById(R.id.blurView);
+
+        float radius = 20f;
+        View decorView = getWindow().getDecorView();
+        Drawable windowBackground = decorView.getBackground();
+
+        blurView.setupWith((ViewGroup) decorView)
+            .setFrameClearDrawable(windowBackground)
+            .setBlurAlgorithm(new RenderScriptBlur(this))
+            .setBlurRadius(radius)
+            .setOverlayColor(Color.parseColor("#40FFFFFF")) // white transparent overlay
+            .setHasFixedTransformationMatrix(true);
+    }
+}
 /**
  * A terminal emulator activity.
  * <p/>
