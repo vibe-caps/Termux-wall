@@ -3,19 +3,18 @@
     <!-- Border -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@android:color/transparent" />
             <stroke
                 android:width="2dp"
-                android:color="#80FFFFFF"/> <!-- semi-transparent white -->
-            <corners android:radius="12dp"/>
+                android:color="#80FFFFFF"/> <!-- semi-transparent white border -->
+            <corners android:radius="16dp"/>
         </shape>
     </item>
 
     <!-- Glass background -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#40FFFFFF"/> <!-- Transparent white (glass look) -->
-            <corners android:radius="12dp"/>
+            <solid android:color="#40FFFFFF"/> <!-- transparent white -->
+            <corners android:radius="16dp"/>
         </shape>
     </item>
 
