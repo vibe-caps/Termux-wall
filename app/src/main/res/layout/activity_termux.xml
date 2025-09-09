@@ -64,7 +64,18 @@
                         android:contentDescription="@string/action_open_settings"
                         app:tint="?attr/termuxActivityDrawerImageTint" />
                 </LinearLayout>
-
+                
+                   <FrameLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@drawable/glass_box">
+                       <com.termux.view.TerminalView
+                       android:id="@+id/terminal_view"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scrollbars="vertical"/>
+          </FrameLayout>
+                
                 <!-- Sessions list -->
                 <ListView
                     android:id="@+id/terminal_sessions_list"
