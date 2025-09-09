@@ -34,3 +34,4 @@ jobs:
         with:
           name: termux-wallpaper-apk
           path: app/build/outputs/apk/debug/app-debug.apk
+
