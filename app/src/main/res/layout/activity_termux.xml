@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <com.termux.app.terminal.TermuxActivityRootView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +8,7 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true"
     android:background="@drawable/terminal_background">
-    
+
     <RelativeLayout
         android:id="@+id/activity_termux_root_relative_layout"
         android:layout_width="match_parent"
@@ -20,10 +21,11 @@
         <androidx.drawerlayout.widget.DrawerLayout
             android:id="@+id/drawer_layout"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-            android:layout_above="@+id/terminal_toolbar_view_pager"
-            android:layout_height="match_parent">
+            android:layout_above="@+id/terminal_toolbar_view_pager">
 
+            <!-- Terminal main view -->
             <com.termux.view.TerminalView
                 android:id="@+id/terminal_view"
                 android:layout_width="match_parent"
@@ -34,6 +36,7 @@
                 android:scrollbars="vertical"
                 tools:ignore="UnusedAttribute" />
 
+            <!-- Drawer layout (left side) -->
             <LinearLayout
                 android:id="@+id/left_drawer"
                 android:layout_width="240dp"
@@ -44,13 +47,14 @@
                 android:dividerHeight="0dp"
                 android:descendantFocusability="blocksDescendants"
                 android:orientation="vertical"
-                android:background="@drawable/terminal_background"
-                
+                android:background="@drawable/terminal_background">
 
+                <!-- Settings button -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <ImageButton
                         android:id="@+id/settings_button"
                         android:layout_width="40dp"
@@ -61,6 +65,7 @@
                         app:tint="?attr/termuxActivityDrawerImageTint" />
                 </LinearLayout>
 
+                <!-- Sessions list -->
                 <ListView
                     android:id="@+id/terminal_sessions_list"
                     android:layout_width="match_parent"
@@ -70,6 +75,7 @@
                     android:choiceMode="singleChoice"
                     android:longClickable="true" />
 
+                <!-- Bottom buttons -->
                 <LinearLayout
                     style="?android:attr/buttonBarStyle"
                     android:layout_width="match_parent"
@@ -92,10 +98,11 @@
                         android:layout_weight="1"
                         android:text="@string/action_new_session" />
                 </LinearLayout>
-            </LinearLayout>
 
+            </LinearLayout>
         </androidx.drawerlayout.widget.DrawerLayout>
 
+        <!-- Toolbar -->
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/terminal_toolbar_view_pager"
             android:visibility="gone"
@@ -106,6 +113,7 @@
 
     </RelativeLayout>
 
+    <!-- Bottom space -->
     <View
         android:id="@+id/activity_termux_bottom_space_view"
         android:layout_width="match_parent"
