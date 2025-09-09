@@ -65,19 +65,13 @@
                         app:tint="?attr/termuxActivityDrawerImageTint" />
                 </LinearLayout>
                 
-                   <FrameLayout
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:background="@drawable/glass_box">
-    
-                      <com.termux.view.TerminalView
-                          
-                      android:id="@+id/terminal_view"
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent"
-                      android:scrollbars="vertical"/>
-                </FrameLayout>
-                 
+                   <com.eightbitlab.blurview.BlurView
+                   android:id="@+id/blurView"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="12dp"
+                   android:clipToOutline="true"/>
+                  
                 <!-- Sessions list -->
                 <ListView
                     android:id="@+id/terminal_sessions_list"
