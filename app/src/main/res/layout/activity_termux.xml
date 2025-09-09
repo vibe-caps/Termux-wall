@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true">
+    android:background="@drawable/terminal_background"
 
     <RelativeLayout
         android:id="@+id/activity_termux_root_relative_layout"
@@ -43,7 +44,8 @@
                 android:dividerHeight="0dp"
                 android:descendantFocusability="blocksDescendants"
                 android:orientation="vertical"
-                android:background="?attr/termuxActivityDrawerBackground">
+                android:background="@drawable/terminal_background"
+                
 
                 <LinearLayout
                     android:layout_width="match_parent"
