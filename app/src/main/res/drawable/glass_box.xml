@@ -1,0 +1,22 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="2dp"
+                android:color="#80FFFFFF"/> <!-- semi-transparent white -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Glass background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#40FFFFFF"/> <!-- Transparent white (glass look) -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+</layer-list>
